@@ -12,11 +12,6 @@ public class ButtonPlayAnimation : BaseButtonVR
     {
         if (sharedAnimator != null && selectedAnimation != null)
         {
-            if (audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
-            audioSource.PlayOneShot(selectedAudioClip);
             sharedAnimator.Play(selectedAnimation.name);
             Debug.Log("Playing animation: " + selectedAnimation.name);
         }

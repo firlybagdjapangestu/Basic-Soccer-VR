@@ -7,30 +7,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int howMuchButtonClick = 0; // Add this field
-    public int limitButtonClick = 5; // Add this field
-    public GameObject lockPanel; // Add this field
-    public string ntpServer = "time.google.com"; // Add this field
+    public int howMuchButtonClick = 0;
+    public int limitButtonClick = 5;
+    public string ntpServer = "time.google.com";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is created  
     void Start()
     {
         DateTime currentTime = DateTime.Now;
         Debug.Log("Waktu saat ini: " + currentTime);
-        if (howMuchButtonClick > limitButtonClick)
-        {
-            Debug.Log("Aplikasi Terkunci");
-            lockPanel.SetActive(true);
-        }
-        if (currentTime > expiredApp)
-        {
-            Debug.Log("Aplikasi Terkunci");
-            lockPanel.SetActive(true);
-        }
         StartCoroutine(GetNetworkTime());
     }
 
-    // Update is called once per frame
+    // Update is called once per frame  
     void Update()
     {
 
@@ -46,10 +35,8 @@ public class GameManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
-
-
-    #region
-    public DateTime expiredApp = new DateTime(2025, 5, 30);
+    #region  
+    public DateTime expiredApp = new DateTime(2025, 6, 25);
 
     private IEnumerator GetNetworkTime()
     {
@@ -60,7 +47,7 @@ public class GameManager : MonoBehaviour
         client.Send(data, data.Length);
         IPEndPoint ep = null;
 
-        yield return new WaitForSeconds(1); // Tunggu balasan dari server
+        yield return new WaitForSeconds(1);
 
         if (client.Available > 0)
         {
@@ -73,24 +60,17 @@ public class GameManager : MonoBehaviour
             DateTime networkTime = epochStart.AddMilliseconds(milliseconds);
 
             Debug.Log("Waktu dari server NTP: " + networkTime);
-
-            // Bandingkan waktu dari server dengan waktu kedaluwarsa
-            if (networkTime > expiredApp)
-            {
-                Debug.Log("Aplikasi Terkunci");
-                lockPanel.SetActive(true);
-            }
         }
 
         client.Close();
     }
-    public void ExitApp() //fungsi untuk keluar apps
+
+    public void ExitApp()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #elif UNITY_ANDROID
-            // Untuk Android, menggunakan perintah berikut untuk keluar dari aplikasi
-            Application.Quit();
+       Application.Quit();  
 #endif
     }
     #endregion

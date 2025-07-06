@@ -1,12 +1,19 @@
 using UnityEngine;
+using TMPro;
 
 public class ButtonChoiceAnimation : BaseButtonVR
 {
+    [SerializeField] private string moveTitle;
+    [TextArea(3, 10)]
+    [SerializeField] private string moveDescription;
+
+    [SerializeField] private TextMeshPro moveTitleText;
+    [SerializeField] private TextMeshPro moveDescriptionText;
+
     [SerializeField] private AnimationClip defaultAnimation;
     [SerializeField] private AnimationClip animationClip;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioClip audioIntruction;
-    [SerializeField] private AudioClip audioExplanation;
     [SerializeField] private GameObject coach;
     [SerializeField] private Transform initialTransform;
 
@@ -46,6 +53,7 @@ public class ButtonChoiceAnimation : BaseButtonVR
     protected override void OnGazeTrigger()
     {
         SetDefaultAnimation();
+        SetTextInformation();
         PlaySound();
         base.OnGazeTrigger();
     }
@@ -65,7 +73,6 @@ public class ButtonChoiceAnimation : BaseButtonVR
             audioSource.Stop();
         }
         animator.Play(defaultAnimation.name);
-        selectedAudioClip = audioExplanation; // Save the selected audio
         selectedAnimation = animationClip; // Save the selected animation
         Debug.Log("Animation selected: " + animationClip.name);
 
@@ -76,6 +83,13 @@ public class ButtonChoiceAnimation : BaseButtonVR
             coach.transform.rotation = initialRotation;
         }
     }
+
+    void SetTextInformation()
+    {
+        moveTitleText.text = moveTitle;
+        moveDescriptionText.text = moveDescription;
+    }
+
 
     private void SetMaterial(bool gazedAt)
     {
