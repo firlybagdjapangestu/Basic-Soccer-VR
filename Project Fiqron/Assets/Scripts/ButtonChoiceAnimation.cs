@@ -14,6 +14,7 @@ public class ButtonChoiceAnimation : BaseButtonVR
     [SerializeField] private AnimationClip animationClip;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioClip audioIntruction;
+    [SerializeField] private AudioClip audioDescription;
     [SerializeField] private GameObject coach;
     [SerializeField] private Transform initialTransform;
 
@@ -72,8 +73,10 @@ public class ButtonChoiceAnimation : BaseButtonVR
         {
             audioSource.Stop();
         }
+        
         animator.Play(defaultAnimation.name);
         selectedAnimation = animationClip; // Save the selected animation
+        selectedAudioClip = audioDescription; // Save the selected audio clip
         Debug.Log("Animation selected: " + animationClip.name);
 
         // Reset the coach's position and rotation to the initial values

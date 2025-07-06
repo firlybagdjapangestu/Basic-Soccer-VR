@@ -566,6 +566,7 @@ MonoBehaviour:
   animationClip: {fileID: 7400000, guid: c26cd7d71ffcdd846bcc1e21d40a551b, type: 2}
   animator: {fileID: 760314542}
   audioIntruction: {fileID: 8300000, guid: 4c5758f19139cad418388eae656b91d9, type: 3}
+  audioDescription: {fileID: 8300000, guid: 470587f30b336aa4ab808005e8accf7e, type: 3}
   coach: {fileID: 760314541}
   initialTransform: {fileID: 760314543}
   InactiveMaterial: {fileID: 2100000, guid: 7d9abc8cdb6b4a240b6266388a7269e4, type: 2}
@@ -927,7 +928,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   howMuchButtonClick: 0
   limitButtonClick: 5
-  lockPanel: {fileID: 495812108}
   ntpServer: time.google.com
 --- !u!1 &308761098
 GameObject:
@@ -2088,6 +2088,7 @@ MonoBehaviour:
   animationClip: {fileID: 7400000, guid: edd9cfd58f05609489102d4c77364ce8, type: 2}
   animator: {fileID: 760314542}
   audioIntruction: {fileID: 8300000, guid: 4c5758f19139cad418388eae656b91d9, type: 3}
+  audioDescription: {fileID: 8300000, guid: 7513426074d757e418a3204c0abd17a0, type: 3}
   coach: {fileID: 760314541}
   initialTransform: {fileID: 760314543}
   InactiveMaterial: {fileID: 2100000, guid: 7d9abc8cdb6b4a240b6266388a7269e4, type: 2}
@@ -3165,6 +3166,7 @@ MonoBehaviour:
   animationClip: {fileID: 7400000, guid: 9113db1881fd41b4b83e7cb7c8eccaf4, type: 2}
   animator: {fileID: 760314542}
   audioIntruction: {fileID: 8300000, guid: 4c5758f19139cad418388eae656b91d9, type: 3}
+  audioDescription: {fileID: 8300000, guid: e9c92405f417a1741a1ae90ea98fb393, type: 3}
   coach: {fileID: 760314541}
   initialTransform: {fileID: 760314543}
   InactiveMaterial: {fileID: 2100000, guid: 7d9abc8cdb6b4a240b6266388a7269e4, type: 2}
@@ -4147,6 +4149,7 @@ MonoBehaviour:
   animationClip: {fileID: 7400000, guid: 78fcc4138a9218446aa9b032cbdf1d35, type: 2}
   animator: {fileID: 760314542}
   audioIntruction: {fileID: 8300000, guid: 4c5758f19139cad418388eae656b91d9, type: 3}
+  audioDescription: {fileID: 8300000, guid: 65d2a0ea9adc93e43ad45456ac4b2d05, type: 3}
   coach: {fileID: 760314541}
   initialTransform: {fileID: 760314543}
   InactiveMaterial: {fileID: 2100000, guid: 7d9abc8cdb6b4a240b6266388a7269e4, type: 2}
@@ -6041,6 +6044,7 @@ MonoBehaviour:
   animationClip: {fileID: 7400000, guid: e0092d8c841bcc84a9f51e719628474e, type: 2}
   animator: {fileID: 760314542}
   audioIntruction: {fileID: 8300000, guid: 4c5758f19139cad418388eae656b91d9, type: 3}
+  audioDescription: {fileID: 8300000, guid: fde6eaa2bb219864bb361acb1a148b61, type: 3}
   coach: {fileID: 760314541}
   initialTransform: {fileID: 760314543}
   InactiveMaterial: {fileID: 2100000, guid: 7d9abc8cdb6b4a240b6266388a7269e4, type: 2}

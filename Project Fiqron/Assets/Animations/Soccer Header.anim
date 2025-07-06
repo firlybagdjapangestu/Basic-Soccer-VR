@@ -83174,18 +83174,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: SetAudioInstruction
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: e9c92405f417a1741a1ae90ea98fb393, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.06666667
-    functionName: Intruction
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
